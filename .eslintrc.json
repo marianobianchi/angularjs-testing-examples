@@ -1,0 +1,41 @@
+{
+  "root": true,
+  "extends": [
+    "angular",
+    "airbnb-base/legacy",
+    "plugin:jasmine/recommended"
+  ],
+  "plugins": [
+    "jasmine"
+  ],
+  "installedESLint": true,
+  "globals": {
+    "angular": 1,
+    "inject": 1,
+    "fixture": 1
+  },
+  "env": {
+    "jasmine": true,
+    "protractor": true
+  },
+  "rules": {
+    "block-scoped-var": 1,
+    "comma-dangle": 0,
+    "func-names": 0,
+    "global-require": 0,
+    "indent": ["error", 4, { "ArrayExpression" : "first", "CallExpression": { "arguments": "first" } }],
+    "max-len": 1,
+    "no-param-reassign": 0,
+    "no-use-before-define": ["error", { "functions": false, "classes": false }],
+    "prefer-template": 0,
+    "quote-props": 0,
+    "space-before-function-paren": 0,
+    "strict": 0,
+    "vars-on-top": 0,
+    "wrap-iife": ["warn", "inside"],
+    "no-unused-vars": 1,
+    "no-restricted-syntax": 0,
+    "spaced-comment": 0,
+    "no-mixed-operators": 0
+  }
+}

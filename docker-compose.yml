@@ -1,0 +1,10 @@
+version: '3'
+services:
+  front:
+    build: .
+    user: node
+    volumes:
+      - .:/usr/src/app/
+    ports:
+      - "9009:9009"
+      - "9876:9876"
