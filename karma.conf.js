@@ -17,10 +17,9 @@ module.exports = function(config) {
         // list of files / patterns to load in the browser
         files: [
             // Only bower_component file excluded from wiredep (only in devDependencies)
-            'app/bower_components/angular-mocks/angular-mocks.js',
+            'bower_components/angular-mocks/angular-mocks.js',
 
             // modules first
-            'app/scripts/**/_*.js',
             'app/scripts/**/*.module.js',
             // all the rest of the files
             'app/scripts/**/*.js',
