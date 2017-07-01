@@ -12,6 +12,10 @@
 
     angular
         .module('main', [
+            'ui.router',
 
+            // App modules
+            'uppercase',
+            'transform',
         ]);
 })();

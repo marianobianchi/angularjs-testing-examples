@@ -16,6 +16,10 @@
             var upperCaseWords = words.map(function(w) {
                 return w[0].toUpperCase() + w.slice(1);
             });
+            // TODO: dejar esto
+            // var upperCaseWords = words.map(function(w) {
+            //     return w ? w[0].toUpperCase() + w.slice(1) : '';
+            // });
 
             return upperCaseWords.join(' ');
         }

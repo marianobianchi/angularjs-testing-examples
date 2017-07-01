@@ -25,14 +25,14 @@
             abstract: true,
         };
 
-        // var dashboard = {
-        //     name: 'main.dashboard',
-        //     url: '/dashboard',
-        //     component: 'dashboard',
-        // };
+        var transform = {
+            name: 'main.transform',
+            url: '/transform',
+            component: 'transform',
+        };
 
         $stateProvider
-            .state(rootState);
-            // .state(dashboard);
+            .state(rootState)
+            .state(transform);
     }
 })();

@@ -1,0 +1,16 @@
+<div class="col-md-4">
+    <form>
+        <div class="form-group">
+            <label for="texto_entrada">Ingrese el texto a transformar</label>
+            <input id="texto_entrada"
+                   ng-model="vm.textoDeEntrada"
+                   ng-change="vm.transformarTexto()"
+                   type="text"
+                   class="form-control"
+                   placeholder="Alguna frase...">
+        </div>
+    </form>
+    <div class="alert alert-info" role="alert">
+        <b>El texto transformado es:</b> {{vm.textoTransformado}}
+    </div>
+</div>
