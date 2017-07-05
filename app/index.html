@@ -18,7 +18,19 @@
 
 <body ng-app="main">
     <div class="container">
-        <ui-view></ui-view>
+        <div class="row">
+            <div class="col-md-2">
+                <h3>Componentes</h3>
+                <div class="btn-group-vertical">
+                    <button class="btn btn-default" ui-sref="main">Home</button>
+                    <button class="btn btn-default" ui-sref="main.transform">Transform</button>
+                    <button class="btn btn-default" ui-sref="main.inventory">Inventory</button>
+                </div>
+            </div>
+            <div class="col-md-10">
+                <ui-view></ui-view>
+            </div>
+        </div>
     </div>
 
 <!--[if lt IE 7]>
@@ -59,9 +71,14 @@
 <script src="scripts/app.module.js"></script>
 <script src="scripts/1-service/uppercase.module.js"></script>
 <script src="scripts/2-component/transform.module.js"></script>
+<script src="scripts/3-components/inventory.module.js"></script>
 <script src="scripts/routes.config.js"></script>
 <script src="scripts/1-service/uppercase.service.js"></script>
 <script src="scripts/2-component/transform.component.js"></script>
+<script src="scripts/3-components/inventory.component.js"></script>
+<script src="scripts/3-components/item-form.component.js"></script>
+<script src="scripts/3-components/item-form.template.js"></script>
+<script src="scripts/3-components/item.component.js"></script>
 <!-- endinject -->
 <!-- endbuild -->
 </body>

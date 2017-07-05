@@ -21,18 +21,25 @@
 
         var rootState = {
             name: 'main',
-            template: '<ui-view/>',
-            abstract: true,
+            url: '/',
         };
 
         var transform = {
             name: 'main.transform',
-            url: '/transform',
+            url: 'transform',
             component: 'transform',
+        };
+
+        var inventory = {
+            name: 'main.inventory',
+            url: 'inventory',
+            component: 'itemList',
         };
 
         $stateProvider
             .state(rootState)
-            .state(transform);
+            .state(transform)
+            .state(inventory)
+            /* trailing semi-colon */;
     }
 })();

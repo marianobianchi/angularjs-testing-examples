@@ -1,7 +1,6 @@
 'use strict';
 
 describe('Component: transform', function () {
-
     var template;
     var element;
     var $scope;
@@ -49,7 +48,7 @@ describe('Component: transform', function () {
             // (y dejo que llame al metodo original)
             spyOn(isolatedScope.vm, 'transformarTexto').and.callThrough();
 
-            element.find('input').eq(0).val(inputValue).triggerHandler('change');
+            element.find('input#texto_entrada').eq(0).val(inputValue).triggerHandler('change');
 
             expect(isolatedScope.vm.transformarTexto).toHaveBeenCalled();
             expect(isolatedScope.vm.textoDeEntrada).toBe(inputValue);

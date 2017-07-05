@@ -17,5 +17,6 @@
             // App modules
             'uppercase',
             'transform',
+            'inventory',
         ]);
 })();

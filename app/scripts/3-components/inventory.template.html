@@ -1,0 +1,6 @@
+<div class="item-list">
+    <item ng-repeat="item in vm.items"
+          item="item"
+          on-edit="vm.updateItemCount($index, total)"
+          on-delete="vm.removeItem($index)"></item>
+</div>
