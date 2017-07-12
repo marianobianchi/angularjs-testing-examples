@@ -1,6 +1,11 @@
-<div class="item-list">
-    <item ng-repeat="item in vm.items"
-          item="item"
-          on-edit="vm.updateItemCount($index, total)"
-          on-delete="vm.removeItem($index)"></item>
+<div class="row margintop">
+    <div class="item-list">
+        <item ng-repeat="item in vm.items"
+        item="item"
+        on-edit="vm.updateItemCount($index, total)"
+        on-delete="vm.removeItem($index)"></item>
+    </div>
+</div>
+<div class="row margintop">
+    <item-form on-create="vm.addItem(name, total)"></item-form>
 </div>

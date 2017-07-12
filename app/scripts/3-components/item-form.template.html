@@ -1,0 +1,13 @@
+<form class="form-horizontal">
+    <div class="form-group">
+        <label for="itemName">Nuevo item</label>
+        <input type="text"
+               class="form-control"
+               id="itemName"
+               placeholder="Enter item name"
+               ng-model="vm.itemName">
+    </div>
+    <button type="submit" name="submit" ng-click="vm.submit()" class="btn btn-primary">
+        <span class="glyphicon glyphicon-plus"></span> Add
+    </button>
+</form>
