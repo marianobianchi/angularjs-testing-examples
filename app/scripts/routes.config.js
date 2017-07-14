@@ -33,7 +33,7 @@
         var inventory = {
             name: 'main.inventory',
             url: 'inventory',
-            component: 'itemList',
+            component: 'inventory',
         };
 
         $stateProvider

@@ -1,10 +1,7 @@
 <div class="row margintop">
-    <div class="item-list">
-        <item ng-repeat="item in vm.items"
-        item="item"
-        on-edit="vm.updateItemCount($index, total)"
-        on-delete="vm.removeItem($index)"></item>
-    </div>
+    <item-list items="vm.items"
+               on-edit="vm.updateItemCount(idx, total)"
+               on-delete="vm.removeItem(idx)"></item-list>
 </div>
 <div class="row margintop">
     <item-form on-create="vm.addItem(name, total)"></item-form>

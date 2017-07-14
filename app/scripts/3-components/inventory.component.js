@@ -3,15 +3,15 @@
 
     angular
         .module('inventory')
-        .component('itemList', {
-            controller: itemList,
+        .component('inventory', {
+            controller: inventory,
             controllerAs: 'vm',
             templateUrl: 'scripts/3-components/inventory.template.html',
         });
 
-    itemList.$inject = ['Item'];
+    inventory.$inject = ['Item'];
 
-    function itemList(Item) {
+    function inventory(Item) {
         var vm = this;
 
         vm.addItem = addItem;

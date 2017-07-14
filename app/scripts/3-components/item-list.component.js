@@ -3,12 +3,12 @@
 
     angular
         .module('inventory')
-        .component('item', {
+        .component('itemList', {
             controller: itemCtrl,
             controllerAs: 'vm',
-            templateUrl: 'scripts/3-components/item.template.html',
+            templateUrl: 'scripts/3-components/item-list.template.html',
             bindings: {
-                'item': '<',
+                'items': '<',
                 'onEdit': '&',
                 'onDelete': '&',
             }
@@ -20,12 +20,12 @@
         vm.remove = remove;
         vm.update = update;
 
-        function remove() {
-            vm.onDelete();
+        function remove(i) {
+            vm.onDelete({ idx: i });
         }
 
-        function update() {
-            vm.onEdit({ total: vm.item.total });
+        function update(i, t) {
+            vm.onEdit({ idx: i, total: t });
         }
     }
 })();
