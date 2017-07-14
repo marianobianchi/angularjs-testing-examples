@@ -1,8 +1,9 @@
 'use strict';
 
 describe('Component: transform', function () {
-    var template;
     var element;
+    var isolatedScope;
+    var template;
     var $scope;
     var $compile;
 
@@ -26,6 +27,12 @@ describe('Component: transform', function () {
             element = $compile(template)($scope);
             // Evalúa expresiones, dispara los handlers de excepciones y los listeners
             $scope.$apply();
+
+            // Tomo el scope aislado del template... SIEMPRE luego del $apply
+            isolatedScope = element.isolateScope();
+
+            // Creo un spy para chequear que se llame al metodo correcto
+            isolatedScope.vm.transformarTexto = jasmine.createSpy();
         });
 
         it('should show bold message', function () {
@@ -35,30 +42,34 @@ describe('Component: transform', function () {
         });
 
         it('should call transformarTexto on change', function () {
-            var inputValue = 'hola';
-            var result = 'Chau';  // como lo mockeamos puede ser cualquier cosa
-
-            // Tomo el scope aislado del template
-            var isolatedScope = element.isolateScope();
-
-            // Creo un spy para chequear que se llame al metodo correcto
-            isolatedScope.vm.transformarTexto = jasmine.createSpy().and.returnValue(result);
-
             // busco el input, le seteo un valor de entrada y llamo al trigger de cambio
             // Qué pasa si agregamos otro input? Fallaría este test?
             element.find('input#texto_entrada')
-                   .eq(0)
-                   .val(inputValue)
+                   .val('probando 1,2,3')
                    .triggerHandler('change')
                    /**/;
 
             // Chequeo que se llame al metodo correcto
             expect(isolatedScope.vm.transformarTexto).toHaveBeenCalled();
+        });
+
+        it('should use the correct model', function () {
+            var inputValue = 'hola';
+
+            // busco el input, le seteo un valor de entrada y llamo al trigger de cambio
+            // Qué pasa si agregamos otro input? Fallaría este test?
+            element.find('input#texto_entrada')
+                   .val(inputValue)
+                   .triggerHandler('change')
+                   /**/;
+
             // Chequeo que esté bien seteado el modelo
             expect(isolatedScope.vm.textoDeEntrada).toBe(inputValue);
+        });
 
+        it('should show the correct text', function () {
             // Esto no tiene sentido testearlo y es propenso a errores. Lo dejo a modo de ejemplo
-            isolatedScope.vm.textoTransformado = result;
+            isolatedScope.vm.textoTransformado = 'Chau';
             $scope.$apply();
             var divText = element.find('div')
                                  .eq(2)

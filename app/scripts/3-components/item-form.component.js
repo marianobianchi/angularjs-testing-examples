@@ -21,6 +21,7 @@
         function submit() {
             // Crea siempre un item con cantidad 0
             vm.onCreate({ name: vm.itemName, total: 0 });
+            vm.itemName = '';
         }
     }
 })();
