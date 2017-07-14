@@ -1,18 +1,18 @@
 [
     {
         "name": "calzoncillo",
-        "total": 4,
+        "total": 8
     },
     {
         "name": "remera",
-        "total": 4,
+        "total": 4
     },
     {
         "name": "jean",
-        "total": 2,
+        "total": 2
     },
     {
         "name": "zapatillas",
-        "total": 1,
-    },
+        "total": 2
+    }
 ]

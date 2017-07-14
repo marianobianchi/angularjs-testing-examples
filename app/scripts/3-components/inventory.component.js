@@ -9,19 +9,23 @@
             templateUrl: 'scripts/3-components/inventory.template.html',
         });
 
-    function itemList() {
+    itemList.$inject = ['Item'];
+
+    function itemList(Item) {
         var vm = this;
 
         vm.addItem = addItem;
         vm.removeItem = removeItem;
         vm.updateItemCount = updateItemCount;
+        vm.$onInit = onInit;
 
-        vm.items = [
-            { name: 'calzoncillo', total: 8 },
-            { name: 'remera', total: 4 },
-            { name: 'zapatillas', total: 2 },
-            { name: 'ojotas', total: 1 },
-        ];
+        vm.items = [];
+
+        function onInit() {
+            Item.all(function(results) {
+                vm.items = results;
+            });
+        }
 
         function addItem(name, total) {
             vm.items.push({ name: name, total: total });

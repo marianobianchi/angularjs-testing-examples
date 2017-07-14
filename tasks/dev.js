@@ -172,11 +172,8 @@ gulp.task('sass', function() {
 gulp.task('browserSync', function() {
     browserSync.init({
         port: config.browserSyncPort,
-        server: {
-            baseDir: config.base,
-            livereload: true,
-        },
-        browser: 'NO_BROWSER',
+        server: ['app', 'data'],
+        open: false,
     });
 });
 
@@ -188,7 +185,7 @@ gulp.task('serve:dist', function() {
             baseDir: config.dist,
             livereload: false,
         },
-        browser: 'NO_BROWSER',
+        open: false,
     });
 });
 
