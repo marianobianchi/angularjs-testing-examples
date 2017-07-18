@@ -1,5 +1,9 @@
 [
     {
+        "name": "zapatillas",
+        "total": 2
+    },
+    {
         "name": "calzoncillo",
         "total": 8
     },
@@ -9,10 +13,6 @@
     },
     {
         "name": "jean",
-        "total": 2
-    },
-    {
-        "name": "zapatillas",
         "total": 2
     }
 ]

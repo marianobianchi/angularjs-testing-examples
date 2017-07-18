@@ -12,7 +12,7 @@
     inventory.$inject = ['Item'];
 
     function inventory(Item) {
-        var vm = this;
+        var vm = this; // jshint ignore:line
 
         vm.addItem = addItem;
         vm.removeItem = removeItem;
@@ -28,7 +28,8 @@
         }
 
         function addItem(name, total) {
-            vm.items.push({ name: name, total: total });
+            // Uso concat para que cambie el id del array
+            vm.items = vm.items.concat([{ name: name, total: total }]);
         }
 
         function removeItem(index) {

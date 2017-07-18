@@ -13,7 +13,7 @@
         });
 
     function itemFormCtrl() {
-        var vm = this;
+        var vm = this;  // jshint ignore:line
 
         vm.itemName = '';
         vm.submit = submit;
