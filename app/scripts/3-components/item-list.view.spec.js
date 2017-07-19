@@ -48,4 +48,13 @@ describe('Directive: item-list', function () {
                .triggerHandler('change');
         expect(isolatedScope.vm.update).toHaveBeenCalledWith(0, 10);
     });
+
+    // Ejemplo de como testear onChanges desde afuera
+    it('should call vm.sortItems if items change', function() {
+        isolatedScope.vm.sortItems = jasmine.createSpy('sortItems');
+        $scope.items = items.concat([{ name: 'new item', total: 0 }]);
+        expect(isolatedScope.vm.sortItems).not.toHaveBeenCalled();
+        $scope.$apply();
+        expect(isolatedScope.vm.sortItems).toHaveBeenCalled();
+    });
 });
