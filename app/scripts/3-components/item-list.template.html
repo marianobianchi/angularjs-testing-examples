@@ -2,22 +2,22 @@
 <div class="item-list">
     <form class="form-inline" ng-repeat="item in vm.sortedItems">
         <div class="form-group">
-            <label for="name">Name</label>
+            <label>Name</label>
             <input type="text"
                    class="form-control"
-                   id="name"
-                   ng-model="item.name"
+                   name="itemName"
+                   value="{{ item.name }}"
                    readonly>
         </div>
         <div class="form-group">
-            <label for="total">Total</label>
+            <label>Total</label>
             <input type="number"
                    class="form-control"
-                   id="total"
+                   name="itemTotal"
                    ng-model="item.total"
                    ng-change="vm.update($index, item.total)">
         </div>
-        <button type="button" id="remove" ng-click="vm.remove($index)" class="btn btn-danger">
+        <button type="button" name="itemRemove" ng-click="vm.remove($index)" class="btn btn-danger">
             <span class="glyphicon glyphicon-trash"></span>
         </button>
     </form>

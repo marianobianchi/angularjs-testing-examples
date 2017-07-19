@@ -28,7 +28,9 @@
         }
 
         function addItem(name, total) {
-            // Uso concat para que cambie el id del array
+            // TODO: Uso concat para que cambie el id del array.
+            // Si usara un servicio desde backend solo debería llamar al post
+            // y al all otra vez
             vm.items = vm.items.concat([{ name: name, total: total }]);
         }
 

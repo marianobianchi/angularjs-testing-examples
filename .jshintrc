@@ -45,6 +45,7 @@
         "$": false,
         "browser": false,
         "jasmine": false,
+        "fixture": false,
         "describe": false,
         "xdescribe": false,
         "before": false,
