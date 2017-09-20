@@ -13,7 +13,10 @@
                 Ej: process("hola mundo!") == "Hola Mundo!"  */
             var words = text.split(' ');
             var upperCaseWords = words.map(function(w) {
-                return w[0].toUpperCase() + w.slice(1);
+                if (w.length > 0) {
+                    return w[0].toUpperCase() + w.slice(1);
+                }
+                return '';
             });
 
             return upperCaseWords.join(' ');

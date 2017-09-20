@@ -39,7 +39,7 @@ describe('Component: transform', function () {
         });
 
         it('transformarTexto should call uppercaseService.process', function() {
-            component.textoDeEntrada = 'Probando';
+            component.textoDeEntrada = 'probando';
             component.transformarTexto();
             expect(component.textoTransformado).toBe(mockResult);
             expect(uppercaseService.process).toHaveBeenCalledWith(component.textoDeEntrada);

@@ -24,7 +24,7 @@ describe('Service: uppercaseService', function () {
         expect(uppercaseService.process(a)).toBe(a);
     });
 
-    // it('should admit random spaces', function () {
-    //     expect(uppercaseService.process(' hello     world   !   ')).toBe(' Hello     World   !   ');
-    // });
+    it('should admit random spaces', function () {
+        expect(uppercaseService.process(' hello     world   !   ')).toBe(' Hello     World   !   ');
+    });
 });

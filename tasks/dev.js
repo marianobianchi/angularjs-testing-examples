@@ -228,6 +228,16 @@ gulp.task('test', function(done) {
     }, done).start();
 });
 
+gulp.task('test-coverage', function(done) {
+    new KarmaServer({
+        configFile: path.join(__dirname, '/../karma.conf.js'),
+        action: 'run',
+        autoWatch: false,
+        singleRun: true,
+        reporters: ['coverage'],
+    }, done).start();
+});
+
 
 gulp.task('testSingle', function(done) {
     new KarmaServer({

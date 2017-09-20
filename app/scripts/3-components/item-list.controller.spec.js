@@ -18,7 +18,6 @@ describe('Component: itemList', function () {
 
     beforeEach(function () {
         module('inventory');
-        module('templates');
         // Seteo el path base donde están los mocks
         fixture.setBase('tests/mocks');
 

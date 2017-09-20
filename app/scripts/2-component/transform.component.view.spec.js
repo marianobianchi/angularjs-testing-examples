@@ -12,7 +12,7 @@ describe('Component: transform', function () {
         module('transform');
 
         module(function ($provide) {
-            $provide.factory('uppercaseService', function () { return {}; });
+            $provide.service('uppercaseService', function () {  });
         });
 
         inject(function ($rootScope, _$compile_) {
@@ -34,12 +34,6 @@ describe('Component: transform', function () {
 
             // Creo un spy para chequear que se llame al metodo correcto
             isolatedScope.vm.transformarTexto = jasmine.createSpy();
-        });
-
-        it('should show bold message', function () {
-            // Solo de ejemplo, no tiene sentido testear esto
-            // TODO: ver que pasa si agregamos otro b en el template
-            expect(element.find('b').text()).toBe('El texto transformado es:');
         });
 
         it('should call transformarTexto on change', function () {
@@ -67,8 +61,15 @@ describe('Component: transform', function () {
             expect(isolatedScope.vm.textoDeEntrada).toBe(inputValue);
         });
 
+        // Solo de ejemplo, no tiene sentido testear esto
+        // TODO: ver que pasa si agregamos otro b en el template
+        it('should show bold message', function () {
+            expect(element.find('b').text()).toBe('El texto transformado es:');
+        });
+
+        // Igual que antes, esto no tiene sentido testearlo y es propenso a errores.
+        // Lo dejo a modo de ejemplo
         it('should show the correct text', function () {
-            // Esto no tiene sentido testearlo y es propenso a errores. Lo dejo a modo de ejemplo
             isolatedScope.vm.textoTransformado = 'Chau';
             $scope.$apply();
             var divText = element.find('div')

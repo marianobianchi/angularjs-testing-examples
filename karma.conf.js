@@ -59,7 +59,7 @@ module.exports = function(config) {
         // reporters configuration
         reporters: [
             'mocha',
-            'coverage',
+            // 'coverage',
             'kjhtml',
         ],
 
@@ -72,7 +72,10 @@ module.exports = function(config) {
         // optionally, configure the reporter
         coverageReporter: {
             type: 'html',
-            dir: 'coverage/'
+            dir: 'coverage/',
+            instrumenterOptions: {
+                istanbul: { noCompact: true }
+            }
         },
 
         ngHtml2JsPreprocessor: {

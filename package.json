@@ -6,6 +6,7 @@
   "repository": {},
   "scripts": {
     "test": "gulp test",
+    "test:coverage": "gulp test-coverage",
     "start": "gulp serve",
     "start:dist": "gulp serve:dist",
     "start:coverage": "cd coverage && httpserver -p 9009",

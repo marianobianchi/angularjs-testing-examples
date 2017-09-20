@@ -9,7 +9,6 @@ describe('Component: itemForm', function () {
 
     beforeEach(function () {
         module('inventory');
-        module('templates');
 
         onCreateSpy = jasmine.createSpy('onCreate');
         bindings = {
