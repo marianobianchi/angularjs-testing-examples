@@ -12,6 +12,14 @@
             }
         });
 
+    /*
+        Este componente recibe una función onCreate que espera un objeto con
+        claves name y total.
+
+        Tiene un input bindeado a la propiedad itemName. Al hacer submit, debe
+        llamar al método onCreate.
+    */
+
     function itemFormCtrl() {
         var vm = this;  // jshint ignore:line
 

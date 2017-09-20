@@ -20,6 +20,7 @@
   },
   "rules": {
     "block-scoped-var": 1,
+    "angular/no-service-method": 0,
     "comma-dangle": 0,
     "func-names": 0,
     "global-require": 0,

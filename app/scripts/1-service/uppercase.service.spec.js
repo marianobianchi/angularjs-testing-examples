@@ -1,6 +1,6 @@
 'use strict';
 
-describe('Factory: uppercaseService', function () {
+describe('Service: uppercaseService', function () {
     var uppercaseService;
 
     beforeEach(function () {

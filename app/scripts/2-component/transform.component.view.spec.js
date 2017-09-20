@@ -25,6 +25,7 @@ describe('Component: transform', function () {
         beforeEach(function() {
             template = '<transform></transform>';
             element = $compile(template)($scope);
+
             // Evalúa expresiones, dispara los handlers de excepciones y los listeners
             $scope.$apply();
 
@@ -57,7 +58,6 @@ describe('Component: transform', function () {
             var inputValue = 'hola';
 
             // busco el input, le seteo un valor de entrada y llamo al trigger de cambio
-            // Qué pasa si agregamos otro input? Fallaría este test?
             element.find('input#texto_entrada')
                    .val(inputValue)
                    .triggerHandler('change')

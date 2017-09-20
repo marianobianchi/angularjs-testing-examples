@@ -13,10 +13,8 @@ describe('Component: transform', function () {
 
         module(function ($provide) {
             // Mock del uppercaseService
-            $provide.factory('uppercaseService', function () {
-                return {
-                    process: jasmine.createSpy().and.returnValue(mockResult),
-                };
+            $provide.service('uppercaseService', function () {
+                this.process = jasmine.createSpy().and.returnValue(mockResult);
             });
         });
 
