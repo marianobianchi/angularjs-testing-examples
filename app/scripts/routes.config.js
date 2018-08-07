@@ -36,10 +36,17 @@
             component: 'inventory',
         };
 
+        var inventory2 = {
+            name: 'main.inventory2',
+            url: 'inventory_rev2',
+            component: 'inventory2',
+        };
+
         $stateProvider
             .state(rootState)
             .state(transform)
             .state(inventory)
+            .state(inventory2)
             /* trailing semi-colon */;
     }
 })();

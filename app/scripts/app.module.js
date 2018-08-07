@@ -18,5 +18,6 @@
             'uppercase',
             'transform',
             'inventory',
+            'inventory2',
         ]);
 })();

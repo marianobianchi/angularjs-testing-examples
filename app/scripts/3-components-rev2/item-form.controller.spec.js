@@ -1,6 +1,6 @@
 'use strict';
 
-describe('module inventory', function () {
+describe('module inventory2', function () {
     describe('Component: itemForm', function () {
         var component;
         var bindings;
@@ -9,7 +9,7 @@ describe('module inventory', function () {
         var $componentController;
 
         beforeEach(function () {
-            module('inventory');
+            module('inventor2y');
 
             onCreateSpy = jasmine.createSpy('onCreate');
             bindings = {
@@ -20,7 +20,7 @@ describe('module inventory', function () {
                 $scope = $rootScope.$new();
                 $componentController = _$componentController_;
 
-                component = $componentController('itemForm', {
+                component = $componentController('itemForm2', {
                     $scope: $scope
                 }, bindings);
             });

@@ -50,7 +50,7 @@ module.exports = function(config) {
             'karma-coverage',
             'karma-wiredep',
             'karma-mocha-reporter',
-            'karma-phantomjs-launcher',
+            'karma-firefox-launcher',
             'karma-ng-html2js-preprocessor',
             'karma-jasmine-html-reporter',
             'karma-json-fixtures-preprocessor',
@@ -90,8 +90,22 @@ module.exports = function(config) {
         // enable / disable watching file and executing tests whenever any file changes
         autoWatch: true,
 
+
         // start these browsers
-        browsers: ['PhantomJS'],
+        // available browser launchers: https://npmjs.org/browse/keyword/karma-launcher
+        browsers: [
+            'FirefoxHeadless',
+        ],
+
+        // you can define custom flags
+        customLaunchers: {
+            FirefoxHeadless: {
+                base: 'Firefox',
+                flags: [
+                    '--headless',
+                ],
+            }
+        },
 
         // Continuous Integration mode
         // if true, Karma captures browsers, runs the tests and exits

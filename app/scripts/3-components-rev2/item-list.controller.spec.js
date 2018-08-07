@@ -6,7 +6,7 @@ function sortByNameAndCopy(items) {
     });
 }
 
-describe('module inventory', function () {
+describe('module inventory2', function () {
     describe('Component: itemList', function () {
         var bindings;
         var component;
@@ -18,7 +18,7 @@ describe('module inventory', function () {
         var $scope;
 
         beforeEach(function () {
-            module('inventory');
+            module('inventory2');
             // Seteo el path base donde están los mocks
             fixture.setBase('tests/mocks');
 
@@ -44,7 +44,7 @@ describe('module inventory', function () {
                 onEdit: onEditSpy,
             };
 
-            component = $componentController('itemList', {
+            component = $componentController('itemList2', {
                 $scope: $scope
             }, bindings);
         });

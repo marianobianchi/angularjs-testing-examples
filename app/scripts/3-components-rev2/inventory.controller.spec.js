@@ -1,6 +1,6 @@
 'use strict';
 
-describe('module inventory', function () {
+describe('module inventory2', function () {
     describe('Component: inventory', function () {
         var bindings;
         var component;
@@ -10,7 +10,7 @@ describe('module inventory', function () {
         var $scope;
 
         beforeEach(function () {
-            module('inventory');
+            module('inventory2');
             module('templates');
 
             // En vez de mockear el servicio, voy a mockear el backend
@@ -27,7 +27,7 @@ describe('module inventory', function () {
         });
 
         beforeEach(function() {
-            component = $componentController('inventory', {
+            component = $componentController('inventory2', {
                 $scope: $scope
             }, bindings);
 

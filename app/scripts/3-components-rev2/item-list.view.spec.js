@@ -1,6 +1,6 @@
 'use strict';
 
-describe('module inventory', function () {
+describe('module inventory2', function () {
     describe('Directive: item-list', function () {
         var element;
         var isolatedScope;

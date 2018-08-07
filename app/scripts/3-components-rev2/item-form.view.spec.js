@@ -1,6 +1,6 @@
 'use strict';
 
-describe('module inventory', function () {
+describe('module inventory2', function () {
     describe('Directive: item-form', function () {
         var element;
         var inputValue;
@@ -11,7 +11,7 @@ describe('module inventory', function () {
         var $compile;
 
         beforeEach(function () {
-            module('inventory');
+            module('inventory2');
             module('templates');
 
             inject(function ($rootScope, _$compile_) {
@@ -22,7 +22,7 @@ describe('module inventory', function () {
             // Creo spy para on-create
             $scope.onCreateSpy = jasmine.createSpy('onCreateSpy');
 
-            template = '<item-form on-create="onCreateSpy"></item-form>';
+            template = '<item-form2 on-create="onCreateSpy"></item-form2>';
             element = $compile(template)($scope);
             inputValue = 'hola';
 
